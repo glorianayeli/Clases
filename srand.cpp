@@ -18,6 +18,6 @@ int main()
 int lanzardado(){
     
     int res=0;
-    res=rand()%6+1;
+    res=1+rand()%6;
     return res;
 }

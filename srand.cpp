@@ -6,7 +6,7 @@ using namespace std;
 int lanzardado();
 int main()
 {
-    srand(time(0));
+    srand(time(0));// sirve para que se plante una semilla y no salga el mismo numero en rand(); el srand se planta una sola vez por programa
     for(int x=1;x<=100;x++)
     {
         cout<<lanzardado()<<" ";

@@ -73,16 +73,17 @@ int aleatoriotortuga()
 
 void gano(int liebre, int tortuga)
 {
-    if (liebre>tortuga)
-    {
-        cout<<"gano la liebre";
-    }
-    else if(tortuga>liebre)
-    {
-        cout<<"gano la tortuga";
-    }
-    else if(tortuga>80&&liebre>80)
+    if(tortuga>80&&liebre>80)
     {
         cout<<"Es empate";
     }
+    if else (liebre>tortuga)
+    {
+        cout<<"gano la liebre";
+    }
+    else
+    {
+        cout<<"gano la tortuga";
+    }
+   
 }

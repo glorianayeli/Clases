@@ -7,7 +7,7 @@ int lanzardado();
 int main()
 {
     int vec[6]={0};
-    int dado,uno=0,dos=0,tres=0,cuatro=0,cinco=0,seis=0;
+    int dado;
     srand(time(0));// sirve para que se plante una semilla y no salga el mismo numero en rand(); el srand se planta una sola vez por programa
     for(int x=1;x<=100;x++)
     {

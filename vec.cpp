@@ -6,6 +6,7 @@ void mostrar(int vec[],int tam);
 int sumar(int v[],int tam);
 void mostrarinverso(int v[],int tam);
 void girararriba(int v[],int tam);
+void invertir(int v[], int tam);
 
 int main()
 {
@@ -14,9 +15,13 @@ int main()
     cout<<"Ingresa el numero";
     cin>>num;
     llenar(vec,10,num);
-    mostrar(vec,10);
+    mostrar(vec,10);cout<<endl;
     cout<<sumar(vec,10)<<endl;
-    mostrarinverso(vec,10);
+    mostrarinverso(vec,10);cout<<endl;
+    girararriba(vec,10);cout<<endl;
+    mostrar(vec,10);
+    invertir(vec,10);cout<<endl;
+    mostrar(vec,10);
     return 0;
 }
 void llenar(int v[], int tam, int valor)
@@ -49,4 +54,22 @@ void mostrarinverso(int v[],int tam)
     {
         cout<<v[i]<<"\t";
     }                                                      
+}
+void girararriba(int v[],int tam)
+{
+    int aux=v[0];
+    for(int i=0;i<tam-1;i++)
+    {
+        v[i]=v[i+1];
+    }
+    v[tam-1]=aux;
+}
+void invertir(int v[], int tam)
+{
+    int aux,con=tam-1;
+    for(int i=0;i<tam-1;i++)
+    {
+        v[i]=con;
+        con--;
+    }
 }

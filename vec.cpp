@@ -6,6 +6,7 @@ void mostrar(int vec[],int tam);
 int sumar(int v[],int tam);
 void mostrarinverso(int v[],int tam);
 void girararriba(int v[],int tam);
+void girarabajo(int v[],int tam);
 void invertir(int v[], int tam);
 
 int main()
@@ -21,6 +22,8 @@ int main()
     girararriba(vec,10);cout<<endl;
     mostrar(vec,10);
     invertir(vec,10);cout<<endl;
+    mostrar(vec,10);
+    girarabajo(vec,10);cout<<endl;
     mostrar(vec,10);
     return 0;
 }
@@ -66,10 +69,20 @@ void girararriba(int v[],int tam)
 }
 void invertir(int v[], int tam)
 {
-    int aux,con=tam-1;
-    for(int i=0;i<tam-1;i++)
+    int i,j,aux;
+    for(i=0,j=tam-1;i<tam/2;i++,j--)
     {
-        v[i]=con;
-        con--;
+        aux=v[j];
+        v[j]=v[i];
+        v[i]=aux;
     }
+}
+void girarabajo(int v[],int tam)
+{
+    int aux=v[tam-1];
+    for(int i=tam-1;i>0;i--)
+    {
+        v[i]=v[i-1];
+    }
+    v[0]=aux;
 }

@@ -12,10 +12,14 @@ int main()
     {
         juno+=lanzardado();
         if(juno<100)
+        {
             juno+=v[jdos];
+        }
         jdos+=lanzardado();
-        
-        jdos+=tablero[jdos];
+        if(jdos<100)
+        {
+            jdos+=tablero[jdos];
+        }
     }
     return 0;
 }

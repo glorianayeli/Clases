@@ -2,8 +2,9 @@
 #include <iostream>
 using namespace std;
 #include <time.h>
+#include <stdlib.h>
 int lanzardado();
-void llenarvector(tablero,tam);
+void llenarvector(int tablero[],int tam);
 int main()
 {
     srand(time(0));
@@ -15,7 +16,7 @@ int main()
         juno+=lanzardado();
         if(juno<100)
         {
-            juno+=v[jdos];
+            juno+=tablero[jdos];
         }
         jdos+=lanzardado();
         if(jdos<100)
@@ -27,13 +28,13 @@ int main()
 }
 int lanzardado()
 {
-    srand(time(0));
-    dado=srand()%6+1;
+    int dado=0;
+    dado=rand()%6+1;
     return dado;
 }
-void llenarvector(tablero,tam)
+void llenarvector(int tablero[],int tam)
 {
-    int(i=0;i<101;i++)
+    for(int i=0;i<101;i++)
     {
         tablero[i]=0;
     }
